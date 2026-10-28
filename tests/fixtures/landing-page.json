@@ -1,0 +1,30 @@
+{
+  "pageTitle": "Agentic Development in Practice | Demo book launch",
+  "content": {
+    "h1": "Agentic Development in Practice",
+    ".subtitle": "From individual prompts to dependable delivery loops",
+    ".author": "Demo author (placeholder)",
+    "#about-the-book p": "Explore how explicit goals, small changes, and verifiable feedback turn AI-assisted development into a dependable delivery loop. This demo introduces a practical approach to planning, implementing, and reviewing software with human decision gates.",
+    ".cta": "Explore the book"
+  },
+  "coverAlt": "Demo cover for Agentic Development in Practice, with interlocking loops on a dark green background",
+  "ctaTarget": "#about-the-book",
+  "readingOrder": [
+    "figure",
+    ".eyebrow",
+    "h1",
+    ".subtitle",
+    ".author",
+    ".cta",
+    "#about-heading",
+    "#about-the-book p"
+  ],
+  "copyOrder": ["h1", ".subtitle", ".author", ".cta", "#about-heading", "#about-the-book p"],
+  "layout": {
+    "375": { "direction": "stacked", "minimumGap": 40 },
+    "1280": { "direction": "side-by-side", "minimumGap": 64 }
+  },
+  "minimumPageInset": 24,
+  "maximumContentWidth": 1088,
+  "maximumCoverWidth": 336
+}
