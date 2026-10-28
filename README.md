@@ -90,13 +90,35 @@ echo '{"tool_input":{"command":"git push origin feature/4-launch-page"}}' | pyth
 # → allowed (exit 0)
 ```
 
-## The landing page (issue #4)
+## The landing page (issue #1)
 
 A worked output of the loop lives at [`index.html`](./index.html) — a single, self-contained
 book-launch page (inline CSS, no build step).
 
-- **Open it:** double-click `index.html`, or `python -m http.server`.
-- **Verify it:** `python -m unittest tests.test_landing_page` runs the acceptance checks.
+Open `index.html` directly in a browser. The page has no runtime dependencies or build step.
+It is a clearly labeled demonstration with provisional copy, an unannounced author, original
+cover artwork, and an in-page "Explore the book" link rather than a purchase or signup flow.
+
+To verify it, install Node.js 24 and run:
+
+```text
+npm ci
+npx playwright install chromium
+npm run lint
+npm test
+```
+
+The browser suite checks visible content, CTA and keyboard navigation, self-contained loading,
+no horizontal overflow, and the frozen layout fixture at 375px and 1280px. Accessibility checks
+include landmarks, a single h1, the cover's accessible name, and axe WCAG A/AA scans. SVG text
+contrast uses computed-color WCAG calculations with strict paint/overlap assumptions to
+supplement axe's unresolved image-background results; no axe rules are disabled. Negative
+regressions reject low contrast and unsupported transparency.
+
+`verify.yml` runs the same checks on pushes to feature branches and on pull requests, installing
+Chromium's Linux system dependencies as well. Failed runs retain browser reports, screenshots
+and traces for seven days. The PR acceptance-checklist gate remains separate: check boxes only
+with linked evidence, then wait for human merge authorization.
 
 ## Reset between demos
 
