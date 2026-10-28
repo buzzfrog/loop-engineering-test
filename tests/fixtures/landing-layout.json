@@ -1,0 +1,30 @@
+{
+  "semanticOrder": [
+    "book-title",
+    "book-subtitle",
+    "book-author",
+    "book-blurb",
+    "book-cta",
+    "book-cover",
+    "book-details"
+  ],
+  "viewports": [
+    {
+      "width": 375,
+      "height": 900,
+      "arrangement": "stacked",
+      "coverWidth": { "min": 300, "max": 320 },
+      "columnGap": { "min": 48, "max": 48 },
+      "outerMargin": { "min": 24, "max": 24 }
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "arrangement": "side-by-side",
+      "coverWidth": { "min": 320, "max": 320 },
+      "columnGap": { "min": 64, "max": 140 },
+      "outerMargin": { "min": 80, "max": 80 }
+    }
+  ],
+  "pixelTolerance": 1
+}
