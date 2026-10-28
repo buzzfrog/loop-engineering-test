@@ -90,13 +90,34 @@ echo '{"tool_input":{"command":"git push origin feature/4-launch-page"}}' | pyth
 # → allowed (exit 0)
 ```
 
-## The landing page (issue #4)
+## The landing page (issue #5)
 
-A worked output of the loop lives at [`index.html`](./index.html) — a single, self-contained
-book-launch page (inline CSS, no build step).
+A worked output of the loop lives at [`index.html`](./index.html) — a self-contained
+book-launch demonstration with inline CSS and original embedded artwork, no external
+assets and no build step. Book copy and publishing details are provisional; the
+**Explore the book** link opens the in-page details, not a checkout or signup.
 
-- **Open it:** double-click `index.html`, or `python -m http.server`.
-- **Verify it:** `python -m unittest tests.test_landing_page` runs the acceptance checks.
+**Open it:** double-click `index.html`. No server or dependencies are needed to view it.
+
+**Verify it:** with Node.js 24 or later, run from the repository root:
+
+```text
+npm ci
+npx playwright install chromium
+npm run lint
+npm test
+```
+
+On Linux, use `npx playwright install --with-deps chromium` to install browser system
+dependencies too, as CI does. These are development-only tools.
+
+The browser suite loads the actual HTML file and checks content, keyboard navigation,
+offline self-containment, horizontal bounds and WCAG AA accessibility at 375px and 1280px.
+The frozen layout contract in `tests/fixtures/landing-layout.json` pins content order,
+geometry and key visual tokens; a negative check confirms layout drift is rejected.
+Do not regenerate the fixture just to make a failing layout pass. CI runs HTML lint and
+the same browser suite; the separate PR done-condition gate stays red until every
+acceptance box has passing evidence.
 
 ## Reset between demos
 
