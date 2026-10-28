@@ -90,13 +90,27 @@ echo '{"tool_input":{"command":"git push origin feature/4-launch-page"}}' | pyth
 # → allowed (exit 0)
 ```
 
-## The landing page (issue #4)
+## The landing page (issue #3)
 
 A worked output of the loop lives at [`index.html`](./index.html) — a single, self-contained
 book-launch page (inline CSS, no build step).
 
 - **Open it:** double-click `index.html`, or `python -m http.server`.
-- **Verify it:** `python -m unittest tests.test_landing_page` runs the acceptance checks.
+- **Verify it:** with Node.js 24 installed, run:
+
+  ```text
+  npm ci --ignore-scripts --no-audit --no-fund
+  npx playwright install chromium
+  npm run lint
+  npm test
+  ```
+
+The browser suite opens the page offline at 375px and 1280px, checking approved content,
+keyboard navigation, accessibility (including contrast), and fixture-locked responsive
+layout. CI runs the same checks and installs Chromium's system dependencies.
+
+This is a demo with placeholder author credit and original cover artwork. The CTA links
+to the on-page book description; there are no purchases, signups, or external runtime assets.
 
 ## Reset between demos
 
