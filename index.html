@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore a demonstration of Agentic Development in Practice, a book about building reliable software delivery loops.">
+  <title>Agentic Development in Practice | Book launch demo</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      color: #202e2c;
+      background: #f7f2e9;
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .shell {
+      width: calc(100% - 48px);
+      max-width: 1088px;
+      margin-inline: auto;
+    }
+
+    .site-header {
+      padding-block: 32px;
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: #38564f;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .site-header p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      align-items: center;
+      gap: 32px;
+      padding-block: 24px;
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      font-size: 40px;
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+      overflow-wrap: anywhere;
+    }
+
+    .subtitle {
+      margin: 0 0 16px;
+      font-size: 22px;
+      line-height: 1.4;
+    }
+
+    .author {
+      margin: 0 0 24px;
+      font-weight: 700;
+    }
+
+    .blurb {
+      margin: 0 0 28px;
+      max-width: 55ch;
+    }
+
+    .cta {
+      display: inline-block;
+      max-width: 100%;
+      padding: 12px 24px;
+      border-radius: 6px;
+      color: #ffffff;
+      background: #245c4e;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .cta:hover {
+      background: #194235;
+    }
+
+    a:focus-visible {
+      outline: 3px solid #202e2c;
+      outline-offset: 4px;
+    }
+
+    .book-cover {
+      justify-self: center;
+      width: min(100%, 320px);
+      margin: 0;
+      padding: 24px;
+      border-radius: 12px;
+      color: #fff5e8;
+      background: #143f3c;
+    }
+
+    .book-cover img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .book-cover figcaption {
+      padding-top: 24px;
+    }
+
+    .cover-title {
+      margin: 0 0 16px;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .cover-author {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .book-details {
+      margin-top: 40px;
+      padding-block: 32px 64px;
+      border-top: 1px solid #bcb5a9;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 28px;
+      line-height: 1.25;
+    }
+
+    .book-details p {
+      max-width: 65ch;
+      margin: 0;
+    }
+
+    .site-footer {
+      padding-block: 24px;
+      background: #e9e1d5;
+      font-size: 14px;
+    }
+
+    .site-footer p {
+      margin-block: 0;
+    }
+
+    @media (min-width: 800px) {
+      .hero {
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+        gap: 64px;
+        padding-block: 48px;
+      }
+
+      h1 {
+        font-size: 56px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header shell">
+    <p>Book launch / demonstration</p>
+  </header>
+  <main>
+    <section class="hero shell" aria-labelledby="book-title">
+      <div class="book-copy">
+        <p class="eyebrow">Build the loop. Keep the judgment.</p>
+        <h1 id="book-title">Agentic Development in Practice</h1>
+        <p class="subtitle">From individual prompts to reliable delivery loops</p>
+        <p class="author">Author name (placeholder)</p>
+        <p class="blurb">Move beyond one-off prompts. Explore how clear objectives, small changes and verifiable feedback can turn AI-assisted development into a dependable engineering practice, with people steering the decisions that matter.</p>
+        <a class="cta" href="#about-the-book">Explore the book</a>
+      </div>
+      <figure class="book-cover">
+        <img width="300" height="240" alt="Original cover illustration: three connected loops on a deep green field." src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 240'%3E%3Crect width='300' height='240' fill='%23143f3c'/%3E%3Cpath d='M65 70H235M65 120H235M65 170H235' stroke='%23e3ab79' stroke-width='8'/%3E%3Cg fill='%23143f3c' stroke='%23fff5e8' stroke-width='10'%3E%3Ccircle cx='65' cy='70' r='34'/%3E%3Ccircle cx='235' cy='120' r='34'/%3E%3Ccircle cx='65' cy='170' r='34'/%3E%3C/g%3E%3C/svg%3E">
+        <figcaption>
+          <p class="cover-title">Agentic Development in Practice</p>
+          <p class="cover-author">Author name (placeholder)</p>
+        </figcaption>
+      </figure>
+    </section>
+    <section id="about-the-book" class="book-details shell" aria-labelledby="about-title">
+      <h2 id="about-title">A practice, not just a prompt</h2>
+      <p>Discover the delivery loop: understand the goal, review the plan, implement in small slices, verify the result and keep the final decision with a human. This demonstration introduces the idea; its book copy and publishing details are provisional.</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p class="shell">Demonstration page. Title, author and publishing details are provisional.</p>
+  </footer>
+</body>
+</html>

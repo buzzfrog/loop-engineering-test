@@ -1,0 +1,32 @@
+{
+  "landmarks": ["HEADER", "MAIN", "FOOTER"],
+  "heroOrder": [".book-copy", ".book-cover"],
+  "copyOrder": [".eyebrow", "#book-title", ".subtitle", ".author", ".blurb", ".cta"],
+  "colors": {
+    "pageBackground": "rgb(247, 242, 233)",
+    "pageText": "rgb(32, 46, 44)",
+    "ctaBackground": "rgb(36, 92, 78)",
+    "ctaText": "rgb(255, 255, 255)",
+    "coverBackground": "rgb(20, 63, 60)"
+  },
+  "viewports": {
+    "375": {
+      "layout": "stacked",
+      "shellWidth": 327,
+      "shellX": 24,
+      "heroGap": 32,
+      "heroPadding": 24,
+      "headingFontSize": 40,
+      "coverWidth": 320
+    },
+    "1280": {
+      "layout": "columns",
+      "shellWidth": 1088,
+      "shellX": 96,
+      "heroGap": 64,
+      "heroPadding": 48,
+      "headingFontSize": 56,
+      "coverWidth": 320
+    }
+  }
+}
